@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import "./App.css";
+// import Home from "./Home";
+// import Maternal Health from "./MaternalHealth";
+// import Services from "./Services";
 
 
 function App() {
@@ -93,7 +96,9 @@ function App() {
             <p>Heart Rate: {heartRate}</p>
           </div>
         )}
-          
+        {/* <Route path="/about" element={About/>}/>
+        <Route path="/about" element={Maternal Health/>}/>
+        <Route path="/about" element={Services/>}/> */}
         </header>
 		</div>
   );
