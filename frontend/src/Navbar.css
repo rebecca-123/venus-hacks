@@ -1,0 +1,30 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #33333300;
+  }
+  
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+  }
+  
+  .navbar-link {
+    color: rgb(76, 39, 108);
+    text-decoration: none;
+    padding: 10px;
+
+  }
+  
+  .navbar-link:hover {
+    background-color: #ffffff77;
+    border-radius: 7px; /* Rounded edges for links */
+    transition: background-color 0.3s;
+  }
+  
