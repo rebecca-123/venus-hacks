@@ -18,7 +18,7 @@ function App() {
 	useEffect(() => {
 		// Using fetch to fetch the api from 
 		// flask server it will be redirected to proxy
-		fetch("http://localhost:5000/data").then((res) =>
+		fetch("http://localhost:5002/data").then((res) =>
 			 {
 				// Setting a data from api
         console.log(res);
@@ -46,5 +46,6 @@ function App() {
 		</div>
 	);
 }
+
 
 export default App;
