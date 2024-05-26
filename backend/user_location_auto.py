@@ -12,7 +12,7 @@ class UserLocation:
                        "state" : self.state, "postal_code" : self.zip_code}
 
     def _get_location(self):
-        geo_lookup = GeoLookup("921a4e0e6b2883cdb65b92a7298ecbfe") 
+        geo_lookup = GeoLookup("2ec7c17df431b8dfaeafef07ecd93cf9") 
 
         return geo_lookup.get_own_location()
 
