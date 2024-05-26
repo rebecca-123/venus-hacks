@@ -1,4 +1,3 @@
-# Import flask and datetime module for showing date and time
 from flask import Flask
 from flask_cors import CORS
 from maternal_risk import mr_api
@@ -6,22 +5,20 @@ from mr_model import initMaternalRisk
 from flask.cli import AppGroup
 
 app = Flask(__name__)
+
 cors = CORS(app)
+# allow Content-Type header in CORS requests
 app.config['CORS_HEADERS'] = 'Content-Type'
- 
 
 app.register_blueprint(mr_api)
 
 @app.route('/')
-def foo():
-    return "hello"
- 
-# Route for seeing a data
+def home():
+    return "<h1>Home page</h1>"
+
 @app.route('/data')
-def get_time():
- 
-    # Returning an api for showing in reactjs
-    return "bruh"
+def data():
+    return "<h1>Data endpoint</h1>"
 
 # Create an AppGroup for custom commands
 custom_cli = AppGroup('custom', help='Custom commands')
