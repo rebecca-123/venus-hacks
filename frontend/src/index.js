@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MaternalRiskForm from './MaternalRiskForm';
+import MaternalRiskForm from './MaternalHealth.jsx';
 import Services from './Services';
 export { default } from './Navbar';
 

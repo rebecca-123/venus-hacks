@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./Navbar";
-import Home from "./home";
-import MaternalRiskForm from "./MaternalRiskForm";
-import Services from "./Services";
 import "./App.css";
 
 export default function App() {
   
   useEffect(() => {
-    fetch("http://localhost:5002/data")
+    fetch("http://localhost:5002")
       .then(res => res.json())
       .catch(error => {
         console.error('Error fetching data:', error);
