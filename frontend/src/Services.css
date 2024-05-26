@@ -1,7 +1,7 @@
 
 .Services {
     text-align: center;
-    font-family: Optima, sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
   }
   
   .Services-header {
@@ -43,12 +43,12 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     color: black;
-    font-family: Optima, sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 78%;
   }
   
   input[type="submit"] {
-    font-family: Optima, sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 18px;
     margin: 2.5em;
     padding: 10px 20px;
@@ -120,6 +120,7 @@
     margin-top: 20px;
     text-align: auto;
     margin-bottom: 20px;
+    justify-content: center;
   }
   
   .results-box h2{

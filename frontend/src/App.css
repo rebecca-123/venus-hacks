@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  font-family: Optima, sans-serif;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 .App-header {
@@ -58,12 +58,12 @@ input[type="text"] {
   border-radius: 5px;
   border: 1px solid #ccc;
   color: black;
-  font-family: Optima, sans-serif;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
   font-size: 78%;
 }
 
 input[type="submit"] {
-  font-family: Optima, sans-serif;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
   font-size: 18px;
   margin: 2.5em;
   padding: 10px 20px;

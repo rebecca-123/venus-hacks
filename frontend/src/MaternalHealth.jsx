@@ -57,14 +57,18 @@ function MaternalHealthForm() {
     }
 
     return (
-          <div className = "MaternalRiskForm">
+      <div class="w-full max-w-xs">
           <header className = "MaternalRiskForm-header">
           <h1>MaterniCheck</h1>
           <Navbar />
-          <h2>Maternal Health</h2>
-          <form onSubmit={handleSubmit}>
-            <p>Name: </p>
-            <input type="text" name='fname' value={inputs.fname} onChange={handleChange}/>
+          <h2>Enter the information to calculate your maternal health risk level.</h2>
+          <form class="shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+            <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+              Name
+            </label>
+              <input type="text" name='fname' value={inputs.fname} onChange={handleChange}/>
+            </div>
             <p>Age: </p>
             <input type="text" name='age' value={inputs.age} onChange={handleChange}/>
             <p>Upper Value of Blood Pressure (mmHG): </p>

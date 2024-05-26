@@ -14,3 +14,32 @@
     transition: background-color 0.25s;
     background-color: #9060bd;
   }
+  results-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .results-box h2{
+    margin-top: auto;
+    text-align: center;
+  }
+  .results-box p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align:left;
+  }
+
+  ul{
+    font-size: 22px;
+  }
+
+  results-box .results {
+    color: black;
+  }

@@ -1,6 +1,6 @@
 .MaternalRiskForm {
     text-align: center;
-    font-family: Optima, sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
   }
   
   .MaternalRiskForm-header {
@@ -23,6 +23,8 @@
   }
   .MaternalRiskForm-header h2{
     color: rgb(76, 39, 108);
+    margin-top:2em;
+    font-size: 26px;
   }
   
   .MaternalRiskForm-header p{
@@ -47,12 +49,12 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     color: black;
-    font-family: Optima, sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 78%;
   }
   
   .MaternalRiskForm [type="submit"] {
-    font-family: Optima, sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 18px;
     margin: 2.5em;
     padding: 10px 20px;
