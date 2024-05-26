@@ -6,8 +6,7 @@ class UserLocation:
     """Automatically get user info to find nearby healthcare providers."""
 
     def __init__(self):
-        self.state = "CA"
-        self.zip_code = "92602"
+        self.state, self.zip_code = self._get_state_zip()
         self.limit = 0
         self.search = {"limit": self.limit, "taxonomy_description" : "Obstetrics & Gynecology", 
                        "state" : self.state, "postal_code" : self.zip_code}
