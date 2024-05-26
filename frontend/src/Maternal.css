@@ -1,9 +1,9 @@
-.MaternalHealthForm {
+.MaternalRiskForm {
     text-align: center;
     font-family: Optima, sans-serif;
   }
   
-  .MaternalHealthForm-header {
+  .MaternalRiskForm-header {
     background: linear-gradient(to bottom, #f8d0df, #ffdbc0); 
     background-color: #ffd6fe;
     min-height: 100vh;
@@ -18,30 +18,30 @@
 
   }
   
-  .MaternalHealthForm-header h1{
+  .MaternalRiskForm-header h1{
     color: rgb(76, 39, 108);
   }
-  .MaternalHealthForm-header h2{
+  .MaternalRiskForm-header h2{
     color: rgb(76, 39, 108);
   }
   
-  .MaternalHealthForm-header p{
+  .MaternalRiskForm-header p{
     color: rgb(76, 39, 108);
   }
 
-  .MaternalHealthForm-results h2{
+  .MaternalRiskForm-results h2{
     color: rgb(76, 39, 108);
     font-size: 24px;
   }
 
-  .MaternalHealthForm form {
+  .MaternalRiskForm form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5 em;
   }
   
-  .MaternalHealthForm input[type="text"] {
+  .MaternalRiskForm input[type="text"] {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
@@ -51,7 +51,7 @@
     font-size: 78%;
   }
   
-  .MaternalHealthForm [type="submit"] {
+  .MaternalRiskForm [type="submit"] {
     font-family: Optima, sans-serif;
     font-size: 18px;
     margin: 2.5em;
@@ -63,7 +63,7 @@
     cursor: pointer;
   }
   
-  .MaternalHealthForm input[type="submit"]:hover {
+  .MaternalRiskForm input[type="submit"]:hover {
     transition: background-color 0.25s;
     background-color: #9060bd;
   }
@@ -101,7 +101,7 @@
     margin-top: 20px;
   }
   
-  .MaternalHealthForm .body-box{
+  .MaternalRiskForm .body-box{
     padding: 2em 3em;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
@@ -112,10 +112,10 @@
     width: 60%;
   }
   
-  .MaternalHealthForm input{
+  .MaternalRiskForm input{
     color: rgba(255, 255, 255, 0.445);
   }
-  .MaternalHealthForm .results-box {
+  .MaternalRiskForm .results-box {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     width: 60%;

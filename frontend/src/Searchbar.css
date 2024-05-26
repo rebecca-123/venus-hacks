@@ -1,0 +1,16 @@
+.SearchBar{
+    font-family: Optima, sans-serif;
+    font-size: 18px;
+    margin: 2.5em;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(88, 55, 116);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .SearchBar:hover {
+    transition: background-color 0.25s;
+    background-color: #9060bd;
+  }

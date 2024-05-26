@@ -18,7 +18,7 @@ class UserLocationManual(UserLocation):
         if self.city:
             self.search["city"] = self.city
         if self.state:
-            self.search["state"] = self.city
+            self.search["state"] = self.state
         if self.zip_code:
             self.search["postal_code"] = self.zip_code
         

@@ -28,7 +28,7 @@ class UserLocation:
         providers = requests.get(url, params=self.search)
         if providers.status_code == 200:
             providers = json.loads(providers.text)
-            results = providers["results"]
+            results = providers.get("results")
             if not results:
                 yield "No doctors found nearby.\n"
             else:
@@ -51,4 +51,4 @@ class UserLocation:
                         city = addresses[j]["city"]
                         state = addresses[j]["state"]
                         postal = addresses[j]["postal_code"]
-                        yield f"{name_info['first_name']} {name_info['last_name']}, {name_info['credential']}\n{street}\n{city}, {state} {postal[0:5]}-{postal[5:]}\n\n"
+                        yield f"{name_info.get('first_name') or ""} {name_info.get('last_name') or ""}, {name_info.get('credential') or ""}\n{street}\n{city}, {state} {postal[0:5]}-{postal[5:]}\n\n"

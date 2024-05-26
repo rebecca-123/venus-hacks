@@ -1,5 +1,5 @@
 # Import flask and datetime module for showing date and time
-from flask import Flask, Response, request
+from flask import Flask, Response, request, jsonify
 from flask_cors import CORS
 from maternal_risk import mr_api
 from mr_model import initMaternalRisk
@@ -51,8 +51,8 @@ def stream_manual_providers():
     user_location_manual = UserLocationManual(city, state, zip_code)
     generator = user_location_manual.find_providers(limit)
     # return Response(generator, content_type='text/plain')
-    return jsonify(generator)
+    return jsonify(list(generator))
      
 # Running app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5002)

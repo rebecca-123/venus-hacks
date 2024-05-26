@@ -11,11 +11,7 @@ const SearchBar = () => {
   const [state, setState] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [results, setResults] = useState({
-    city: "",
-    zip: "",
-    state: ""
-  });
+  const [results, setResults] = useState([]);
 
   const findLocations = async (event) => {
     event.preventDefault();
@@ -26,10 +22,13 @@ const SearchBar = () => {
         setErrorMessage("");
       }
     try {
+        console.log(state)
       // Perform your logic here, for example, making an API call with axios
-      const response = await axios.get(`http://yourapi.com/locations?city=${city}&zip=${zip}&state=${state}`);
+      const response = await fetch(`http://localhost:5002/manual_providers?city=${city}&zip=${zip}&state=${state}`);
       // Assuming response.data contains the results from your API
-      setResults(response.data);
+      const data = await response.json()
+      setResults(data);
+      console.log(data)
       // Show results
       setShowResults(true);
     } catch (error) {
@@ -52,13 +51,13 @@ const SearchBar = () => {
       {showResults && (
         <div className="results-box">
           <h2 className="results">Results</h2>
+          <ul>
           {results.map((result, index) => (
-            <div key={index}>
-              <p className="results-p">City: {result.city}</p>
-              <p className="results-p">ZIP: {result.zip}</p>
-              <p className="results-p">State: {result.state}</p>
-            </div>
+            // <div key={index}>
+              <li>{results}</li>
+            // </div>
           ))}
+          </ul>
         </div>
       )}
     </div>

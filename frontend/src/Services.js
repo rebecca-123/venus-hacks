@@ -14,7 +14,7 @@ const Services = () => {
           <Navbar />
       <h2>Services</h2>
       <p>Enter your city, state, & zip code to find nearby services</p>
-      <SearchBar />
+      <SearchBar></SearchBar>
       </header>
     </div>
   );

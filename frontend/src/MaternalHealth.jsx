@@ -3,7 +3,6 @@ import axios from 'axios';
 import "./Maternal.css";
 import Navbar from "./Navbar";
 
-import Navbar from "./Navbar";
 import './Maternal.css';
 
 function MaternalHealthForm() {
@@ -76,7 +75,7 @@ function MaternalHealthForm() {
             <input type="text" name='bs' value={inputs.bs} onChange={handleChange}/>
             <p>Heart Rate: </p>
             <input type="text" name='hr' value={inputs.hr} onChange={handleChange}/>
-            <button type="submit">Calculate Risk!</button>
+            <button type="submit">Calculate Risk</button>
           </form>
           {submitted && (
             <div className="results-box">
