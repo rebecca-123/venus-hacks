@@ -6,9 +6,7 @@ class UserLocation:
     """User info to find nearby healthcare providers."""
 
     def __init__(self):
-        #self.zip_code, self.state = self._get_postal_and_state()
-        self.zip_code = 92602
-        self.state = "CA"
+        self.zip_code, self.state = self._get_postal_and_state()
         self.limit = 0
         self.search = {"limit": self.limit, "taxonomy_description" : "Obstetrics & Gynecology", 
                        "postal_code" : self.zip_code, "state" : self.state}
@@ -52,11 +50,6 @@ class UserLocation:
                         city = addresses[j]["city"]
                         state = addresses[j]["state"]
                         postal = addresses[j]["postal_code"]
-                        print(f"{street}\n{city}, {state} {postal[0:5]}-{postal[5:]}")
-
-
-if __name__ == '__main__':
-   user1 = UserLocation()
-   user1.find_providers(5)
+                        return (street, city, state, postal)
 
 
