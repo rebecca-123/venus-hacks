@@ -38,7 +38,7 @@ class MaternalRiskModel:
         self.model = None
         self.dt = None
         # define ML features and target
-        self.features = ['Age', 'SystolicBP', 'BS', 'BodyTemp', 'HeartRate']
+        self.features = ['Age', 'SystolicBP', 'BS', 'HeartRate']
         self.target = 'RiskLevel'
         # load dataset
         self.maternal_risk_data = pd.read_csv("maternal_risk.csv")
@@ -46,6 +46,7 @@ class MaternalRiskModel:
     # clean the dataset
     def _clean(self):
         # Convert boolean columns to integers
+        self.maternal_risk_data = self.maternal_risk_data.drop(columns=['BodyTemp'])
         self.maternal_risk_data['RiskLevel'] = self.maternal_risk_data['RiskLevel'].apply(lambda x: 1 if x == 'high risk' else 0)
         self.maternal_risk_data = self.maternal_risk_data.apply(remove_outliers, axis=0)
 
@@ -88,7 +89,6 @@ class MaternalRiskModel:
                 'Age'
                 'SystolicBP'
                 'BS'
-                'BodyTemp'
                 'HeartRate'
 
         Returns:
@@ -134,7 +134,6 @@ def testMaternalRisk():
     'Age': [28],
     'SystolicBP': [120],
     'BS': [6],
-    'BodyTemp': [98],
     'HeartRate': [75]
     }
     print("\t", patient)
