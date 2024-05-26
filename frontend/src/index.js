@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import MaternalRiskForm from './MaternalRiskForm';
+import Services from './Services';
 export { default } from './Navbar';
 
 //ReactDOM.render(
@@ -21,6 +22,9 @@ root.render(
    <BrowserRouter>
    <Routes>
     <Route path = "/" element={<App/>}/>
+    <Route path = "/services" element={<Services/>}/>
+    <Route path = "/maternal-risk" element={<MaternalRiskForm/>}/>
+
    </Routes>
    </BrowserRouter>
  </React.StrictMode>

@@ -6,7 +6,8 @@ class UserLocation:
     """Automatically get user info to find nearby healthcare providers."""
 
     def __init__(self):
-        self.state, self.zip_code = self._get_state_zip()
+        self.state = "CA"
+        self.zip_code = "92602"
         self.limit = 0
         self.search = {"limit": self.limit, "taxonomy_description" : "Obstetrics & Gynecology", 
                        "state" : self.state, "postal_code" : self.zip_code}
@@ -38,11 +39,12 @@ class UserLocation:
 
     def _parse_locations(self, providers_dict):
         if providers_dict[0]["addresses"][0]["state"] != self.state:
-            print("No doctors found nearby.")
+            yield "No doctors found nearby.\n"
         else:
             i = 0
             for i in range(len(providers_dict)):
                 addresses = providers_dict[i]["addresses"]
+                name_info = providers_dict[i]["basic"]
                 for j in range(len(addresses)):
                     if (addresses[j]["address_purpose"] == "LOCATION")\
                         and (addresses[j]["state"]) == self.state:
@@ -50,4 +52,4 @@ class UserLocation:
                         city = addresses[j]["city"]
                         state = addresses[j]["state"]
                         postal = addresses[j]["postal_code"]
-                        yield f"{street}\n{city}, {state} {postal[0:5]}-{postal[5:]}"
+                        yield f"{name_info['first_name']} {name_info['last_name']}, {name_info['credential']}\n{street}\n{city}, {state} {postal[0:5]}-{postal[5:]}\n\n"
