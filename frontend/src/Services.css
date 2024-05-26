@@ -113,14 +113,16 @@
   }
   .results-box {
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    width: 60%;
+    padding: 2em;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
     margin-top: 20px;
     text-align: auto;
     margin-bottom: 20px;
-    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+    word-spacing: 5px;
   }
   
   .results-box h2{
@@ -134,7 +136,17 @@
   }
 
   .Searchbar {
-    color: rgb(188, 30, 30);
+    color: rgb(99, 58, 134);
     padding: 20px;
     margin-top: 20px;
+  }
+
+  ul {
+    margin: 12px;
+    padding-top: 10px;
+    line-height: 30px;;
+  }
+
+  .list {
+    margin-top: 10px;
   }

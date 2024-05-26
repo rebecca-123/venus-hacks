@@ -16,7 +16,12 @@ export default function App() {
       <div className="App">
         <header className="App-header">
           <h1>Welcome to MaterniCheck!</h1>
-          <h2>Designed to guide women through their maternal concerns.</h2>
+          <h2>Empowerimg women and expectant mothers<br></br> 
+          with vital health insights
+            to help<br></br> 
+            assess risk of pregnancy complications
+            and<br></br> 
+            offer support and services.</h2>
           <h3>Get Started</h3>
           <Navbar />
         </header>

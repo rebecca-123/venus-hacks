@@ -49,12 +49,12 @@ const SearchBar = () => {
         {errorMessage && <p>{errorMessage}</p>}
       </form>
       {showResults && (
-        <div className="content-center">
+        <div className="results-box content-center">
           <h2 className="results">Results</h2>
-          <ul>
+          <ul className="list-none">
           {results.map((result, index) => (
             // <div key={index}>
-              <li>{result}</li>
+              <div className="list">{result}</div>
             // </div>
           ))}
           </ul>

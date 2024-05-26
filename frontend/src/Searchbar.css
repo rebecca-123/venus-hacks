@@ -1,5 +1,5 @@
 .SearchBar{
-    font-family: Optima, sans-serif;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 18px;
     margin: 2.5em;
     padding: 10px 20px;
@@ -23,7 +23,7 @@
     margin-top: 20px;
     text-align: auto;
     margin-bottom: 20px;
-    justify-content: center;
+    justify: center;
   }
   
   .results-box h2{
@@ -40,6 +40,19 @@
     font-size: 22px;
   }
 
-  results-box .results {
-    color: black;
+  button {
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin: 2.5em;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(88, 55, 116);
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    transition: background-color 0.25s;
+    background-color: #9060bd;
   }
