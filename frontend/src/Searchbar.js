@@ -52,9 +52,13 @@ const SearchBar = () => {
       {showResults && (
         <div className="results-box">
           <h2 className="results">Results</h2>
-          <p className="results-p">City: {results.city}</p>
-          <p className="results-p">ZIP: {results.zip}</p>
-          <p className="results-p">State: {results.state}</p>
+          {results.map((result, index) => (
+            <div key={index}>
+              <p className="results-p">City: {result.city}</p>
+              <p className="results-p">ZIP: {result.zip}</p>
+              <p className="results-p">State: {result.state}</p>
+            </div>
+          ))}
         </div>
       )}
     </div>

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import "./Maternal.css";
+import Navbar from "./Navbar";
 
-function MaternalRiskForm() {
+
+function MaternalHealthForm() {
     
     const [inputs, setInputs] = useState({
       fname: '',
@@ -54,6 +57,7 @@ function MaternalRiskForm() {
 
     return (
           <div>
+          <Navbar />
           <form onSubmit={handleSubmit}>
             <p>Name: </p>
             <input type="text" name='fname' value={inputs.fname} onChange={handleChange}/>
@@ -79,5 +83,5 @@ function MaternalRiskForm() {
     );
 }
 
-export default MaternalRiskForm;
+export default MaternalHealthForm;
 

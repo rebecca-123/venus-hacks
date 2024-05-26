@@ -21,7 +21,6 @@ def foo():
 # Route for seeing a data
 @app.route('/data')
 def get_time():
- 
     # Returning an api for showing in reactjs
     return "bruh"
 
@@ -51,7 +50,8 @@ def stream_manual_providers():
     
     user_location_manual = UserLocationManual(city, state, zip_code)
     generator = user_location_manual.find_providers(limit)
-    return Response(generator, content_type='text/plain')
+    # return Response(generator, content_type='text/plain')
+    return jsonify(generator)
      
 # Running app
 if __name__ == '__main__':
