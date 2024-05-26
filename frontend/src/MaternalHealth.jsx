@@ -3,6 +3,8 @@ import axios from 'axios';
 import "./Maternal.css";
 import Navbar from "./Navbar";
 
+import Navbar from "./Navbar";
+import './Maternal.css';
 
 function MaternalHealthForm() {
     
@@ -56,8 +58,11 @@ function MaternalHealthForm() {
     }
 
     return (
-          <div>
+          <div className = "MaternalRiskForm">
+          <header className = "MaternalRiskForm-header">
+          <h1>MaterniCheck</h1>
           <Navbar />
+          <h2>Maternal Health</h2>
           <form onSubmit={handleSubmit}>
             <p>Name: </p>
             <input type="text" name='fname' value={inputs.fname} onChange={handleChange}/>
@@ -79,7 +84,8 @@ function MaternalHealthForm() {
                 <p>You are at {riskLevel} risk of pregnancy complications.</p>
             </div>
           )}
-          </div>
+          </header>
+        </div>
     );
 }
 
