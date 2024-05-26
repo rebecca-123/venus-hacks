@@ -1,24 +1,29 @@
-from flask import Flask
+# Import flask and datetime module for showing date and time
+from flask import Flask, Response, request
 from flask_cors import CORS
 from maternal_risk import mr_api
 from mr_model import initMaternalRisk
 from flask.cli import AppGroup
+from user_location_auto import UserLocation
+from user_location_manual import UserLocationManual
 
 app = Flask(__name__)
-
 cors = CORS(app)
-# allow Content-Type header in CORS requests
 app.config['CORS_HEADERS'] = 'Content-Type'
+ 
 
 app.register_blueprint(mr_api)
 
 @app.route('/')
-def home():
-    return "<h1>Home page</h1>"
-
+def foo():
+    return "hello"
+ 
+# Route for seeing a data
 @app.route('/data')
-def data():
-    return "<h1>Data endpoint</h1>"
+def get_time():
+ 
+    # Returning an api for showing in reactjs
+    return "bruh"
 
 # Create an AppGroup for custom commands
 custom_cli = AppGroup('custom', help='Custom commands')
@@ -30,6 +35,23 @@ def generate_data():
 # Register the custom command group with the Flask application
 app.cli.add_command(custom_cli)
  
+@app.route('/providers', methods=['GET'])
+def get_providers_auto():
+    limit = request.args.get('limit', default=10, type=int)
+    user_location = UserLocation()
+    generator = user_location.find_providers(limit)
+    return Response(generator, content_type='text/plain')
+
+@app.route('/manual_providers', methods=['GET'])
+def stream_manual_providers():
+    city = request.args.get('city', default="")
+    state = request.args.get('state', default="")
+    zip_code = request.args.get('zip_code', default="")
+    limit = request.args.get('limit', default=10, type=int)
+    
+    user_location_manual = UserLocationManual(city, state, zip_code)
+    generator = user_location_manual.find_providers(limit)
+    return Response(generator, content_type='text/plain')
      
 # Running app
 if __name__ == '__main__':
