@@ -1,0 +1,139 @@
+
+.Services {
+    text-align: center;
+    font-family: Optima, sans-serif;
+  }
+  
+  .Services-header {
+    background: linear-gradient(to bottom, #f8d0df, #ffdbc0); 
+    background-color: #ffd6fe;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-shadow: 0px 3px 3px rgb(255, 255, 255);
+    vertical-align: center;
+  }
+  
+  .Services-header h1{
+    color: rgb(76, 39, 108);
+  }
+  .Services-header h2{
+    color: rgb(76, 39, 108);
+  }
+  
+  .Services-header p{
+    color: rgb(76, 39, 108);
+  }
+  
+  /* Styling for form inputs and labels */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5 em;
+  }
+  
+  input[type="text"] {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+    font-family: Optima, sans-serif;
+    font-size: 78%;
+  }
+  
+  input[type="submit"] {
+    font-family: Optima, sans-serif;
+    font-size: 18px;
+    margin: 2.5em;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(88, 55, 116);
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    transition: background-color 0.25s;
+    background-color: #9060bd;
+  }
+  
+  /* Styling for the navigation links */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: rgb(99, 58, 134);
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: #f5f3f7;
+  }
+  
+  nav ul li a:hover {
+    box-shadow: #ccc;
+  }
+  
+  .navbar-container{
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .body-box{
+    padding: 2em 3em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding-top:1em;
+    padding-bottom: 3em;
+    width: 60%;
+  }
+  
+  input{
+    color: rgba(255, 255, 255, 0.445);
+  }
+  .results-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: auto;
+    margin-bottom: 20px;
+  }
+  
+  .results-box h2{
+    margin-top: auto;
+    text-align: center;
+  }
+  .results-box p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align:left;
+  }
+
+  .Searchbar {
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+  }
